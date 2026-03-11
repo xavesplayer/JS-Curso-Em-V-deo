@@ -1,4 +1,4 @@
-PS C:\Users\Jeffe\OneDrive\Área de Trabalho\CursoJS> node
+node
 Welcome to Node.js v24.12.0.      
 Type ".help" for more information.
 > var n1 = 1545.5
