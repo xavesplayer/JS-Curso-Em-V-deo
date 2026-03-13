@@ -12,46 +12,67 @@
       style="margin-left: 40px; margin-top: 40px; color:rgb(252, 252, 252)"
     >
     </h2>
+    <!--Bookmarks-->
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">Índice</button>
       <div id="myDropdown" class="dropdown-content">
         <a href="#Proc">Precedência de operadores aritméticos</a>
-        <a href="#Atri">Operadores de atribuição</a>
-        <a href="#Incre">Operadores de incremento</a>
-        <a href="#Rela">Operadores relacionais</a>
+        <a href="#Atri">Operadores de Atribuição</a>
+        <a href="#Incre">Operadores de Incremento</a>
+        <a href="#Rela">Operadores Relacionais</a>
+        <a href="#Logi">Operadores Lógicos</a>
+        <a href="#Tern">Operadores Ternários</a>
+        <a href="#DOM">DOM</a>
       </div>
     </div>
+    <pre>
+      <h3 style="margin-left: 0;">Precedência de operações</h3>
+
+Primeiro operadores aritméticos
+Segundo operadores relacionais
+Terceiro operadores lógicos
+
+------------------------------------------------------
+    </pre>
     <h3 id="Proc">Precedência de operadores aritméticos</h3>
     <pre>
  
-1º  ()
+1º ()
 
-2º  **
+2º **
 
 3º's  *  /  %
 
-4º's  + 
+4º's  + -
+
+5º *Relacionais não tem ordem de precedência
+
+6º !
+
+7º &&
+
+8º ||
 
 ------------------------------------------------------
 
 </pre>
-    <h3 id="Atri"> Operadores de atribuição </h3>
+    <h3 id="Atri"> Operadores de Atribuição </h3>
     <pre>
 
 (Quando uma var recebe ela mesma)
 var n = 3
-n = n + 4   ou   n += 4 
+n = n + 4   ou   n += 4
 n = n - 5   ou   n -= 5
 n = n * 4   ou   n *= 4
 n = n / 2   ou   n /= 2
-n = n ** 2  ou   n **= 2
+n = n ** 2  ou   n **= 2 
 n = n % 5   ou   n %= 5
 
 ------------------------------------------------------
 
 </pre>
-    <h3 id="Incre"> Operadores de incremento </h3>
-    <pre>
+    <h3 id="Incre"> Operadores de Incremento </h3>
+<pre>
 
 var x = 5   Pre-incremento   Pós-incremento
 x = x + 1   ++x              x++
@@ -60,15 +81,76 @@ x = x - 1   --x              x--
 ------------------------------------------------------
 
 </pre>
-    <h3 id="Rela"> Operadores Relacionais </h3>
-    <pre>
+    <h3 id="Rela"> Operadores Relacionais</h3>
+      <pre>
 
-5 > 2
-7 < 4
-8 >= 8
-9 <= 7
-5 == 5
-4 != 4
+5 > 2  -> true (cinco maior que dois)
+7 < 4  -> false (sete menor que quatro)
+8 >= 8 -> true  (oito maior ou igual a oito)
+9 <= 7 -> false (nove menor ou igual a sete)
+4 != 4 -> false (quatro diferente de quatro)
+5 == 5 -> true  (cinco igual a cinco)
+5 == '5' -> true (cinco[int] igual a cinco[string])
+5 === '5' -> false (cinco[int] idêntico a cinco[string])
+5 !== '5' -> true (cinco[int] desigual restrito a cinco[string])
+
+
+Obs: O resultado de saída será sempre um valor booleano
+Não testa tipos primitivos com == (igualdade)
+Testa tipos primitivos com === (Operador de igualdade restrita / Identidade)
+
+</pre>
+<pre>
+------------------------------------------------------
+<h3 id="Logi" style="margin-left: 0;">Operadores Lógicos</h3>
+
+! Negação (Não)
+!true -> false
+!false -> true
+
+&& Conjunção (E)
+true && true -> true
+true && false -> false
+false && true -> false
+false && false -> false
+
+|| Disjunção (Ou) (um ou outro, ou os dois, mas não nenhum)
+
+true  || true  -> true
+true  || false -> true
+false || true  -> true
+false || false -> false
+
+ex:
+idade >= 15 && idade <= 17 // a idade está entre 15 e 17?
+estado == 'RJ' || estado == 'SP' // o estado é RJ ou SP?
+salário > 1500 && sexo != 'M' // mulher que ganha mais de 1500?
+
+------------------------------------------------------
+
+</pre>
+<h3>Operadores Ternários</h3>
+<pre>
+(três operandos)
+
+?
+:
+(teste ? true : false)
+ex:
+média >= 7.0 ? "Aprovado" : "Reprovado"
+
+fazendo uma analogia às condições 
+? (If) 
+: (Else)
+
+------------------------------------------------------
+
+</pre>
+<h2 id="DOM" style="text-align: center; color: rgb(102, 154, 250)">DOM</h2>
+<p style="text-align: center; color:rgb(102, 154, 250)">(Document object Model)</p>
+<pre>
+
+
 
 </pre>
   </body>
